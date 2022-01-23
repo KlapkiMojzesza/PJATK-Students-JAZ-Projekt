@@ -16,22 +16,26 @@ public class Student {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "surname")
+    @Column(name = "surname", nullable = false)
     private String surname;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
+
+    @Column(name = "groupnumber", nullable = false)
+    private Integer groupnumber;
 
 
     public Student(){
 
     }
 
-    public Student(int studentindex, String name, String surname, String email) {
+    public Student(int studentindex, String name, String surname, String email, Integer groupnumber) {
         this.studentindex = studentindex;
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.groupnumber = groupnumber;
     }
 
     public Long getId() {
@@ -71,5 +75,13 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getGroupnumber() {
+        return groupnumber;
+    }
+
+    public void setGroupnumber(Integer groupnumber) {
+        this.groupnumber = groupnumber;
     }
 }

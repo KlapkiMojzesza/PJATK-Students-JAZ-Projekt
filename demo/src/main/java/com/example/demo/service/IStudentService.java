@@ -13,6 +13,8 @@ public interface IStudentService {
 
     Student updateStudent(Student student);
 
+    List<Student> getStudentsByGroup(int group);
+
     void deleteStudentById(Long id);
 
 }

@@ -37,6 +37,11 @@ public class StudentService implements IStudentService{
     }
 
     @Override
+    public List<Student> getStudentsByGroup(int group) {
+        return iStudentRepository.findStudentsByGroup(String.valueOf(group));
+    }
+
+    @Override
     public void deleteStudentById(Long id) {
         iStudentRepository.deleteById(id);
     }

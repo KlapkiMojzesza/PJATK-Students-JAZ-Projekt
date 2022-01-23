@@ -65,4 +65,10 @@ public class StudentController {
         return "redirect:/students";
     }
 
+    @GetMapping("/students/group{num}")
+    public String getStudentsByGroup(@PathVariable Integer num, Model model){
+        model.addAttribute("students", studentService.getStudentsByGroup(num));
+        return "students";
+    }
+
 }

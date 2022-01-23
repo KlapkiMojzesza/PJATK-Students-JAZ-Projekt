@@ -22,7 +22,16 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/students}">Student List</a>
+                <a class="nav-link" th:href="@{/students}">All Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/students/group1}">Group 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/students/group2}">Group 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/students/group3}">Group 3</a>
             </li>
         </ul>
     </div>
@@ -37,8 +46,6 @@
            <div class = "col-lg-3">
                <a th:href = "@{/students/new}" class="btn btn-primary btn-sm mb-3"> Add Student</a>
            </div>
-
-
         </div>
 
         <table class="table table-striped table-bordered">
@@ -65,12 +72,8 @@
                         <a th:href = "@{students/{id}(id=${student.id})}"
                            class="btn btn-danger">Delete</a>
                     </td>
-
                 </tr>
-
             </tbody>
-
-
         </table>
     </div>
 
