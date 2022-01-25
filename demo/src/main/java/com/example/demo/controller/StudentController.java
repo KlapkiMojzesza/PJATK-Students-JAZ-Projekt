@@ -54,6 +54,7 @@ public class StudentController {
         studentFound.setName(student.getName());
         studentFound.setSurname(student.getSurname());
         studentFound.setEmail(student.getEmail());
+        studentFound.setGroupnumber(student.getGroupnumber());
 
         studentService.updateStudent(studentFound);
         return "redirect:/students";
